@@ -34,6 +34,13 @@ variable "ingress" {
       to_port = 22
       description = "ssh"
       protocol = "TCP"
+    },
+    {
+      cidr_blocks = [ "0.0.0.0/0" ]
+      from_port = 443
+      to_port = 443
+      description = "https"
+      protocol = "TCP"
     }
   ]
 }
